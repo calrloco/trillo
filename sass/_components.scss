@@ -107,11 +107,24 @@
     list-style: none;
     margin-top: 3.4rem;
     
+    @media only screen and (max-width: $bp-medium){
+        display: flex;
+        margin: 0;
+    }
+    
     &__item {
         position: relative;
 
+        @media only screen and (max-width: $bp-medium){
+           flex: 1;
+        }
+
         &:not(:last-child){
             margin-bottom: .5rem;
+
+            @media only screen and (max-width: $bp-medium){
+              margin-bottom: 0;
+            }
         }
     }
     
@@ -147,6 +160,11 @@
         align-items: center;
         z-index: 10;
         position: relative;
+
+        @media only screen and (max-width: $bp-medium){
+            justify-content: center;
+            padding: 2rem;
+        }
     }
     
     &__icon {
@@ -162,6 +180,10 @@
     font-size: 1.2rem;
     padding: 2.5rem;
     color: var(--color-grey-light-4);
+
+    @media only screen and (max-width: $bp-medium){
+       display: none;
+    }
 }
 /////gallery//////////////
 .gallery{
@@ -328,7 +350,7 @@
         border-radius: 50%;
         border: 3px solid #fff;
         &:not(:last-child){
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
    
